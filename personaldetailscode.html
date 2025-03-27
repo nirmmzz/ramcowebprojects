@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Details</title>
+    <style>
+      body {
+        margin: 30px;
+        background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        width: 80%;
+        max-width: 400px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 24px; /* Increase the font size */
+        margin-bottom: 20px; /* Add more spacing below the title */
+      }
+      /* Center-align form input fields */
+      form div {
+        text-align: left;
+        margin: 10px 0;
+      }
+      /* Set a max-width for the input fields */
+      input[type="text"],
+      input[type="number"],
+      input[type="date"],
+      select {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #17f9f2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0dc2c0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="personal-details-form">
+      <h1>Personal Details</h1>
+      <div>
+        <input type="text" id="name" placeholder="Name" required />
+      </div>
+      <div>
+        <input type="text" id="surname" placeholder="Surname" required />
+      </div>
+      <div>
+        <input
+          type="text"
+          id="mothers-name"
+          placeholder="Mother's Name"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          id="fathers-name"
+          placeholder="Father's Name"
+          required
+        />
+      </div>
+      <div>
+        <input type="number" id="age" placeholder="Age" required />
+      </div>
+      <div>
+        <input type="text" id="address" placeholder="Address" required />
+      </div>
+      <div>
+        <input type="date" id="dob" placeholder="Date of Birth" required />
+      </div>
+      <div>
+        <label for="marital-status">Marital Status:</label>
+        <select id="marital-status" required>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" id="district" placeholder="District" required />
+      </div>
+      <div>
+        <input type="text" id="state" placeholder="State" required />
+      </div>
+      <div>
+        <input type="text" id="city" placeholder="City" required />
+      </div>
+      <div>
+        <input type="text" id="country" placeholder="Country" required>
+    </div>
+    <div>
+        <input type="text" id="nationality" placeholder="Nationality" required>
+    </div>
+    <div>
+        <input type="text" id="religion" placeholder="Religion" required>
+    </div>
+    <div>
+        <input type="text" id="caste" placeholder="Caste" required>
+    </div>
+    <div>
+        <input type="text" id="mother-tongue" placeholder="Mother Tongue" required>
+    </div>
+    <div>
+        <input type="text" id="area-code" placeholder="Area Code" required>
+    </div>
+    <div>
+      <input type="text" id="phone number" placeholder="Phone number" required>
+    </div>
+      <input type="submit" value="Next" required/>
+    </form>
+    <script src="personal-details.js"></script>
+  </body>
+</html>

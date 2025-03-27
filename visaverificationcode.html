@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visa Verification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 800px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form div {
+            text-align: left;
+            margin: 10px 0;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #17f9f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0dc2c0;
+        }
+    </style>
+</head>
+<body>
+    <form id="visa-verification-form" action="submit.php" method="post" enctype="multipart/form-data">
+        <h1>Visa Verification</h1>
+        <div>
+            <input type="text" id="name" name="name" placeholder="Passport Holder's Name" required>
+        </div>
+        <div>
+            <input type="text" id="passport-number" name="passport-number" placeholder="Passport Number" required>
+        </div>
+        <div>
+            <input type="text" id="nationality" name="nationality" placeholder="Nationality" required>
+        </div>
+        <div>
+            <input type="date" id="date-of-birth" name="date-of-birth" placeholder="Date of Birth" required>
+        </div>
+        <div>
+            <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Place of Birth" required>
+        </div>
+        <div>
+            <label for="gender">Sex/Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <input type="date" id="date-of-issue" name="date-of-issue" placeholder="Date of Issue" required>
+        </div>
+        <div>
+            <input type="date" id="date-of-expiry" name="date-of-expiry" placeholder="Date of Expiry" required>
+        </div>
+        <div>
+            <input type="text" id="issuing-authority" name="issuing-authority" placeholder="Issuing Authority" required>
+        </div>
+        <div>
+            <input type="file" id="photograph" name="photograph" accept="image/*" required>
+        </div>
+        <div>
+            <input type="file" id="signature" name="signature" accept="image/*" required>
+        </div>
+        <div>
+            <input type="date" id="flight-departure-date" name="flight-departure-date" placeholder="Date of Flight Departure" required>
+        </div>
+        <div>
+            <input type="date" id="flight-arrival-date" name="flight-arrival-date" placeholder="Date of Flight Arrival" required>
+        </div>
+        <div>
+            <input type="text" id="airports-name" name="airports-name" placeholder="Airports Name" required>
+        </div>
+        <div>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div>
+            <label for="proof-of-nationality">Proof of Nationality:</label>
+            <input type="file" id="proof-of-nationality" name="proof-of-nationality" accept=".pdf,.jpg,.jpeg,.png" required>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

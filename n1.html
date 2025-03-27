@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="registrationApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="FormController">
+    <div class="container">
+        <h2>Register</h2>
+        <form name="registrationForm" ng-submit="register()" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" ng-model="user.name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" ng-model="user.email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" ng-model="user.password" required>
+            
+            <button type="submit" ng-disabled="registrationForm.$invalid">Register</button>
+        </form>
+        <p ng-show="message">{{ message }}</p>
+    </div>
+    
+    <script>
+        angular.module('registrationApp', [])
+        .controller('FormController', function($scope) {
+            $scope.user = {};
+            $scope.message = "";
+            
+            $scope.register = function() {
+                if ($scope.registrationForm.$valid) {
+                    $scope.message = "Registration successful!";
+                } else {
+                    $scope.message = "Please fill out all fields correctly.";
+                }
+            };
+        });
+    </script>
+</body>
+</html>

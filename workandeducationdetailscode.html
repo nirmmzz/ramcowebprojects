@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Educational and Work Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+            color: #000; /* Change text color to black */
+        }
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        form h2 {
+            background-color: #17f9f2;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        div {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            cursor: pointer;
+        }
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 5px;
+            background-color: #17f9f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0dc2c0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Educational and Work Details</h1>
+    <form enctype="multipart/form-data" method="post" action="submit_form.php">
+    <!-- 10th Standard Details -->
+        <h2>10th Standard</h2>
+        <div>
+            <label for="10th-school">School Name:</label>
+            <input type="text" id="10th-school" name="10th-school" required>
+        </div>
+        <div>
+            <label for="10th-start-year">Starting Year:</label>
+            <input type="date" id="10th-start-year" name="10th-start-year" required>
+        </div>
+        <div>
+            <label for="10th-end-year">Ending Year:</label>
+            <input type="date" id="10th-end-year" name="10th-end-year" required>
+        </div>
+        <div>
+            <label for="10th-address">School Address:</label>
+            <textarea id="10th-address" name="10th-address" required></textarea>
+        </div>
+        <div>
+            <label for="10th-certificate">10th Certificate (PDF):</label>
+            <input type="file" id="10th-certificate" name="10th-certificate" accept=".pdf" required>
+        </div>
+
+        <!-- 12th Standard Details -->
+        <h2>12th Standard</h2>
+        <div>
+            <label for="12th-school">School Name:</label>
+            <input type="text" id="12th-school" name="12th-school" required>
+        </div>
+        <div>
+            <label for="12th-start-year">Starting Year:</label>
+            <input type="date" id="12th-start-year" name="12th-start-year" required>
+        </div>
+        <div>
+            <label for="12th-end-year">Ending Year:</label>
+            <input type="date" id="12th-end-year" name="12th-end-year" required>
+        </div>
+        <div>
+            <label for="12th-address">School Address:</label>
+            <textarea id="12th-address" name="12th-address" required></textarea>
+        </div>
+        <div>
+            <label for="12th-certificate">12th Certificate (PDF):</label>
+            <input type="file" id="12th-certificate" name="12th-certificate" accept=".pdf" required>
+        </div>
+        <!-- College Details -->
+        <h2>College</h2>
+        <div>
+            <label for="college-name">College Name:</label>
+            <input type="text" id="college-name" name="college-name" required>
+        </div>
+        <div>
+            <label for="college-address">College Address:</label>
+            <textarea id="college-address" name="college-address" required></textarea>
+        </div>
+        <div>
+            <label for="joining-year">Year of Joining:</label>
+            <input type="date" id="joining-year" name="joining-year" required>
+        </div>
+        <div>
+            <label for="graduation-year">Year of Graduation:</label>
+            <input type="date" id="graduation-year" name="graduation-year" required>
+        </div>
+
+        <!-- Upload Multiple Semester Mark Sheets -->
+        <h2>Upload Semester Mark Sheets:</h2>
+        <div>
+            <input type="file" id="semester-marksheet-1" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-1">Semester 1 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-2" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-2">Semester 2 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-3" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-3">Semester 3 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-4" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-4">Semester 4 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-5" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-5">Semester 5 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-6" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-6">Semester 6 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-7" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-7">Semester 7 Mark Sheet (PDF):</label>
+        </div>
+        <div>
+            <input type="file" id="semester-marksheet-8" name="semester-marksheet[]" accept=".pdf" multiple required>
+            <label for="semester-marksheet-8">Semester 8 Mark Sheet (PDF):</label>
+        </div>
+        <h2>Work Experience</h2>
+        <div>
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required>
+        </div>
+        <div>
+            <label for="company-address">Company Address:</label>
+            <textarea id="company-address" name="company-address" required></textarea>
+        </div>
+        <div>
+            <label for="project-report">Project Report (PDF):</label>
+            <input type="file" id="project-report" name="project-report" accept=".pdf" required>
+        </div>
+        <div>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" required></textarea>
+        </div>
+        <div>
+            <label for="joining-date">Date of Joining:</label>
+            <input type="date" id="joining-date" name="joining-date" required>
+        </div>
+        <div>
+            <label for="exiting-date">Date of Exiting:</label>
+            <input type="date" id="exiting-date" name="exiting-date" required>
+        </div>
+        <div>
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+        </div>
+        <div>
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" required>
+        </div>
+        <div>
+            <label for="reasonforleaving-report">Reason for Leaving (PDF):</label>
+            <input type="file" id="reasonforleaving-report" name="reasonforleaving-report" accept=".pdf" required>
+        </div>
+        <div class="center-button">
+            <input type="button" value="Next">
+        </div>
+    </form>
+</body>
+</html>

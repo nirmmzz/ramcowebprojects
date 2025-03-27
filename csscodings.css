@@ -1,0 +1,22 @@
+* {
+ font-family:Georgia, 'Times New Roman', Times, serif; 
+ margin: px;
+ padding :100;
+text-decoration:rgb(187, 255, 173);
+box-sizing:border-box;
+}
+
+body
+{
+    min height: 100vh;
+    background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+}
+
+form{
+     background-color:linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+     width:500px;
+     height:500px;
+     position:absolute;
+     left: 30%;
+     right: 30%;
+}
